@@ -46,8 +46,3 @@ python scripts/interactive_bpe.py --model bpe_model.json
 - Base vocab: 256 bytes + 3 specials = 259
 - Target vocab size must be ≥ 259; merges = vocab_size − 259
 - Byte-fallback: any unseen character is encoded via its UTF-8 bytes
-
-### Why these choices?
-- Byte base guarantees coverage for multilingual text without unknowns
-- Simple, deterministic training improves reproducibility
-- No external libs → transparency and educational value (KISS/DRY/YAGNI)
